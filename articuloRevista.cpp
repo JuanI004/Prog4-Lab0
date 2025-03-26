@@ -29,5 +29,5 @@ void articuloRevista:: setExtracto(std::string e){
 };
 
 bool articuloRevista:: contienePalabra(std::string s){
-    return this->extracto.contain(s);
+    return this->extracto.find(s) != std::string::npos;
 };

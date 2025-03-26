@@ -1,5 +1,6 @@
 #include "paginaWeb.h"
 
+
 PaginaWeb::PaginaWeb(std::string url, std::string contenidoExtraido) : Publicacion() {
     this->url = url;
     this->contenidoExtraido = contenidoExtraido;
@@ -29,5 +30,5 @@ void PaginaWeb::setContenidoExtraido(std::string contenidoExt) {
 };
 
 bool PaginaWeb::contienePalabra(std::string palabra){
-    return this->contenidoExtraido.contains(palabra);
+    return this->contenidoExtraido.find(palabra) != std::string::npos;
 };
