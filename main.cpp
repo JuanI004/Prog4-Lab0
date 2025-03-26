@@ -42,6 +42,7 @@ void parte_a(){
 	a.setDOI(DOI);
 	a.setTitulo(titulo);
 	a.setFecha(f);
+	guardarPublicacion(a);
 
 	std::string DOI2 = "10.4567/jkl012";
 	std::string titulo2 = "Utilidad de diagramas UML";
@@ -50,6 +51,7 @@ void parte_a(){
 	a2.setDOI(DOI2);
 	a2.setTitulo(titulo2);
 	a2.setFecha(f2);
+	guardarPublicacion(a2);
 	
 }
 
@@ -65,6 +67,7 @@ void parte_b(){
 	a.setDOI(DOI1);
 	a.setTitulo(titulo1);
 	a.setFecha(f1);
+	guardarPublicacion(b1);
 
 	std::string DOI2 = "10.5678/mno345";
 	std::string titulo2 = "Guia de UML";
@@ -78,19 +81,33 @@ void parte_b(){
 	a.setDOI(DOI2);
 	a.setTitulo(titulo2);
 	a.setFecha(f2);
+	guardarPublicacion(b2);
 }
 
 void parte_c(){
-	std::string url = "10.3456/ghi789";
+	std::string DOI = "10.3456/ghi789";
 	std::string titulo = "Diagramas para Principiantes" ;
 	DTFecha f = new DTFecha(20,10,2024);
-	PaginaWeb pw = new PaginaWeb(
-	a.setUrl(url);
+	PaginaWeb pw = new PaginaWeb("www.umlparaprincipiantes.com","En esta pagina web se presenta una gui completa sobre los
+diagramas UML, abordando los diagramas de casos de uso,
+de clases, de secuencia y de actividades." )
+	a.setDOI(DOI);
 	a.setTitulo(titulo);
 	a.setFecha(f);
+	guardarPublicacion(pw);
 }
 
 void parte_d(){
+	int i = 0;
+	Publicaciones aux
+	while (i < publicaciones.size()){
+		aux = publicaciones.front();
+		aux.getDT()
+		push_back(aux);
+		publicaciones.remove_front()
+		cout<< aux;
+		i++;
+	}
 }
 
 void parte_e(){
