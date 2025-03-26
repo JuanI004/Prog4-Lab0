@@ -6,10 +6,6 @@ articuloRevista :: articuloRevista(std::string r, std::string e) : Publicacion()
 };
 
 articuloRevista :: ~articuloRevista(){
-    /*
-    this->~Publicacion();
-    delete this;
-    */
 };
 
 std::string articuloRevista:: getRevista(){
