@@ -3,8 +3,7 @@
 #include "publicacion.h" 
 #include "DTRefer.h"
 #include <map>
-
-class Publicacion;
+#include <set>
 
 class Investigador{
     private:
