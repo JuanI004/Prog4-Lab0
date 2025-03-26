@@ -1,5 +1,4 @@
 #include "publicacion.h"
-#include "investigador.h" 
 
 
 Publicacion::Publicacion(){
@@ -15,10 +14,6 @@ Publicacion::Publicacion(std::string DOI, std::string Titulo, DTFecha Fecha){
 };
 
 Publicacion:: ~Publicacion(){
-    /*this->Fecha = this->~Fecha();
-    delete this->autores;
-    delete this;
-    */
 };
 
 std::string Publicacion::getDOI(){

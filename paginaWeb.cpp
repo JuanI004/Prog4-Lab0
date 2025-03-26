@@ -1,6 +1,4 @@
-#include "publicacion.h"
 #include "paginaWeb.h"
-#include <string>
 
 PaginaWeb::PaginaWeb(std::string url, std::string contenidoExtraido) : Publicacion() {
     this->url = url;
@@ -22,12 +20,12 @@ std::string PaginaWeb::getContenidoExtraido() {
     return this->contenidoExtraido;    
 };
 
-void setUrl(std::string url) {
+void PaginaWeb::setUrl(std::string url) {
     this->url = url;
 };
 
-void setContenidoExtraido(std::string contenidoExt) {
-    this->contenidoExtraido = contenidoExt;
+void PaginaWeb::setContenidoExtraido(std::string contenidoExt) {
+    contenidoExtraido = contenidoExt;
 };
 
 bool PaginaWeb::contienePalabra(std::string palabra){

@@ -1,6 +1,4 @@
 #include "DTFecha.h"
-#include <iostream>
-#include <string>
 
 DTFecha::DTFecha(){
     this->dia = 0;

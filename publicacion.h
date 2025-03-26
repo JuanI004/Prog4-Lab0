@@ -1,5 +1,4 @@
 #include <string>
-#include <vector>
 #include "DTRefer.h"
 //#include "investigador.h"
 #include <iostream>

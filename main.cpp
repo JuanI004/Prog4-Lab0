@@ -1,4 +1,4 @@
-#include <iostream>
+
 #include <list>
 #include <map>
 #include "publicacion.h"
@@ -167,7 +167,7 @@ int main() {
 	std::cout << "parte_k" <<  std::endl;
 	parte_k();
 	std::cout << "cleanUp" <<  std::endl;
-	cleanUp();
+	//cleanUp();
 	std::cout << "fin" <<  std::endl;
 
 	return 0;

@@ -1,6 +1,4 @@
 #include "publicacion.h"
-#include <iostream>
-#include <string>
 
 class PaginaWeb: public Publicacion{
     private:

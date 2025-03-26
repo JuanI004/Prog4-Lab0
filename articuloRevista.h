@@ -1,5 +1,4 @@
 #include "publicacion.h"
-#include <string>
 
 class articuloRevista: public Publicacion {
     private:

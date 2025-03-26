@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "publicacion.h" 
 #include "DTRefer.h"
 #include <map>

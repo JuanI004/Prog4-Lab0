@@ -1,8 +1,4 @@
 #include "DTRefer.h"
-#include <iostream>
-#include <string>
-#include <vector>
-#include "DTFecha.h"
 
 DTRefer::DTRefer(std::string DOI, std::string titulo, DTFecha fecha, std::vector<std::string> autores){
     this->DOI = DOI;
