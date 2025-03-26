@@ -2,7 +2,6 @@
 #include <vector>
 #include "DTRefer.h"
 //#include "investigador.h"
-#include "DTFecha.h"
 #include <iostream>
 
 class Investigador;

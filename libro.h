@@ -1,7 +1,7 @@
 #include "publicacion.h"
 #include <iostream>
 #include <string>
-
+#include <set>
 class libro : public Publicacion{
     private:
        std::string editorial;

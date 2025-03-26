@@ -1,9 +1,6 @@
 #include "publicacion.h"
-#include <iostream>
 #include "investigador.h" 
-#include "DTRefer.h"
-#include "DTFecha.h"
-#include <vector>
+
 
 Publicacion::Publicacion(){
     this->DOI = "";

@@ -1,7 +1,3 @@
-#include <iostream>
-#include <string>
-#include "DTRefer.h"
-#include <map>
 #include "investigador.h"
 
 Investigador::Investigador(std::string ORCID, std::string nombre, std::string institucion){
