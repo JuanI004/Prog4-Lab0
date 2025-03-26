@@ -1,8 +1,9 @@
 #include "libro.h"
 #include <iostream>
 #include <string>
+#include <set>
 
-libro::libro(std::string editorial, set(std::string) palabrasDes) : Publicacion() {
+libro::libro(std::string editorial, std::set(std::string) palabrasDes) : Publicacion() {
     this->editorial = editorial;
     this->palabrasDes = palabrasDes;
 };

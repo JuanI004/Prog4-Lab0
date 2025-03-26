@@ -35,6 +35,7 @@ Publicacion* coleccion_getPublicacion(std::string DOI){
 }
 
 void parte_a(){
+	/*
 	std::string DOI = "10.1234/abc123";
 	std::string titulo = "Fundamentos de POO";
 	DTFecha f = new DTFecha(15,5,2023);
@@ -52,10 +53,11 @@ void parte_a(){
 	a2.setTitulo(titulo2);
 	a2.setFecha(f2);
 	guardarPublicacion(a2);
-	
+	*/
 }
 
 void parte_b(){
+	/*
 	std::string DOI1 = "10.2345/def456";
 	std::string titulo1 = "Patrones de Diseno en c++";
 	DTFecha f1 = new DTFecha(20,8,2022);
@@ -82,9 +84,11 @@ void parte_b(){
 	a.setTitulo(titulo2);
 	a.setFecha(f2);
 	guardarPublicacion(b2);
+	*/
 }
 
 void parte_c(){
+	/*
 	std::string DOI = "10.3456/ghi789";
 	std::string titulo = "Diagramas para Principiantes" ;
 	DTFecha f = new DTFecha(20,10,2024);
@@ -95,11 +99,13 @@ de clases, de secuencia y de actividades." )
 	a.setTitulo(titulo);
 	a.setFecha(f);
 	guardarPublicacion(pw);
+	*/
 }
 
 void parte_d(){
+	/*
 	int i = 0;
-	Publicaciones aux
+	Publicaciones aux;
 	while (i < publicaciones.size()){
 		aux = publicaciones.front();
 		aux.getDT()
@@ -108,11 +114,14 @@ void parte_d(){
 		cout<< aux;
 		i++;
 	}
+		*/
 }
 
 void parte_e(){
+	/*
 	Investigador e1 = new Investigador("0000-0003-1234-5678", "Carla Olivieri", "Universidad de la Republica");
 	Investigador e1 = new Investigador("0000-0001-8765-4321", "Alberto Santos", "Instituto Tecnico");
+	*/
 }
 
 void parte_f(){
