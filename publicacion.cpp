@@ -1,4 +1,5 @@
 #include "publicacion.h"
+#include "Investigador.h" // Include the header for the Investigador class
 
 
 Publicacion::Publicacion(){
