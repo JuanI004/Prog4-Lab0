@@ -1,6 +1,6 @@
 #include <string>
-#include "DTRefer.h"
-//#include "investigador.h"
+#include "DTRefer.hh"
+//#include "investigador.hh"
 #include <iostream>
 
 class Investigador;
@@ -13,7 +13,7 @@ class Publicacion{
         std::vector<Investigador*> autores; 
     public:
         Publicacion();
-        Publicacion(std::string DOI, std::string Titulo, DTFecha Fecha);
+        Publicacion(std::string, std::string, DTFecha);
         ~Publicacion();
         std::string getDOI();
         std::string getTitulo();

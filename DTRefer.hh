@@ -1,5 +1,5 @@
 #include <vector>
-#include "DTFecha.h"
+#include "DTFecha.hh"
 
 class DTRefer {
     private:
@@ -8,7 +8,7 @@ class DTRefer {
         DTFecha fecha;
         std::vector<std::string> autores;
     public:
-        DTRefer(std::string doi, std::string titulo, DTFecha fecha, std::vector<std::string> autores);
+        DTRefer(std::string, std::string, DTFecha, std::vector<std::string>);
         std::string getDOI();
         std::string getTitulo();
         DTFecha getFecha();

@@ -1,4 +1,4 @@
-#include "articuloRevista.h"
+#include "articuloRevista.hh"
 
 articuloRevista :: articuloRevista(std::string r, std::string e) : Publicacion(){
     this->revista = r;

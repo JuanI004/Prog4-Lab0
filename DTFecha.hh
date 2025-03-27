@@ -8,7 +8,7 @@ class DTFecha{
         int anio;
     public:
         DTFecha();
-        DTFecha(int dia, int mes, int anio);
+        DTFecha(int, int, int);
         ~DTFecha();
         int getDia();
         int getMes();

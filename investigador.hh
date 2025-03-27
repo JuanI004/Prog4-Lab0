@@ -1,4 +1,4 @@
-#include "publicacion.h" 
+#include "publicacion.hh" 
 #include <map>
 #include <set>
 
@@ -9,7 +9,7 @@ class Investigador{
         std::string institucion;
         std::map<int, Publicacion> publicaciones;
     public:
-        Investigador(std::string ORCID, std::string nombre, std::string institucion);
+        Investigador(std::string, std::string, std::string);
         ~Investigador();
         std::string getORCID();
         std::string getNombre();

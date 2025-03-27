@@ -1,4 +1,4 @@
-#include "investigador.h"
+#include "investigador.hh"
 
 Investigador::Investigador(std::string ORCID, std::string nombre, std::string institucion){
     this->ORCID = ORCID;

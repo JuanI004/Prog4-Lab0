@@ -1,11 +1,11 @@
-#include "publicacion.h"
+#include "publicacion.hh"
 
 class articuloRevista: public Publicacion {
     private:
         std::string revista;
         std::string extracto;
     public:
-        articuloRevista(std::string revista, std::string extracto);
+        articuloRevista(std::string, std::string);
         ~articuloRevista();
         std::string getRevista();
         std::string getExtracto();

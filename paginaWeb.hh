@@ -1,4 +1,4 @@
-#include "publicacion.h"
+#include "publicacion.hh"
 
 class PaginaWeb: public Publicacion{
     private:

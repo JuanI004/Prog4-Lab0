@@ -1,8 +1,7 @@
-
 #include <list>
 #include <map>
-#include "publicacion.h"
-#include "investigador.h"
+#include "publicacion.hh"
+#include "investigador.hh"
 
 std::list<Publicacion*> publicaciones;
 std::map<std::string, Publicacion*> map_publicaciones;

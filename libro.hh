@@ -1,4 +1,4 @@
-#include "publicacion.h"
+#include "publicacion.hh"
 #include <set>
 
 class libro : public Publicacion{

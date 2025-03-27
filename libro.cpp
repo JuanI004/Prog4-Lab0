@@ -1,4 +1,4 @@
-#include "libro.h"
+#include "libro.hh"
 
 
 libro::libro(std::string editorial, std::set<std::string> palabrasDes) : Publicacion() {

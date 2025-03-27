@@ -1,4 +1,4 @@
-#include "paginaWeb.h"
+#include "paginaWeb.hh"
 
 
 PaginaWeb::PaginaWeb(std::string url, std::string contenidoExtraido) : Publicacion() {

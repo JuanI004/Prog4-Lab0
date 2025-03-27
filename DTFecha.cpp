@@ -1,4 +1,4 @@
-#include "DTFecha.h"
+#include "DTFecha.hh"
 
 DTFecha::DTFecha(){
     this->dia = 0;
