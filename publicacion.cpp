@@ -56,6 +56,16 @@ void Publicacion::setFecha(DTFecha Fecha) {
     this->Fecha = Fecha;
 };
 
+/*
+Publicacion& Publicacion::operator=(const Publicacion& p){
+    this->DOI = p.DOI;
+    this->Titulo = p.Titulo;
+    this->Fecha = p.Fecha;
+    this->autores = p.autores;
+    return *this;
+};
+*/
+
 /*#include "Publicacion.h"
 #include "Investigador.h"
 

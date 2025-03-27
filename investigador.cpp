@@ -38,10 +38,14 @@ std::string Investigador::toString(){
     return this->ORCID + "->" + this->nombre + "/" + this->institucion;
 };
 
-std::set<std::string> Investigador::listarPublicaciones(DTFecha desde, std::string palabra){
-    std::set<std::string> resultados;
+std::set<std::string> Investigador:: listarPublicaciones(DTFecha desde, std::string palabra){
+    if (publicaciones.empty()) {
+        std::cout << "No hay publicaciones registradas." << std::endl;
+        return;
+    }
+    std::set<std::string> publicaciones;
     
-    // Implementation will be added later
+    return publicaciones;
     
-    return resultados;
+
 };

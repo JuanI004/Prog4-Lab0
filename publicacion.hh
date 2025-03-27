@@ -3,7 +3,6 @@
 
 #include <string>
 #include "DTRefer.hh"
-//#include "investigador.hh"
 #include <iostream>
 
 class Investigador;
@@ -17,7 +16,7 @@ class Publicacion {
     public:
         Publicacion();
         Publicacion(std::string, std::string, DTFecha);
-        ~Publicacion();
+        virtual ~Publicacion();
         std::string getDOI();
         std::string getTitulo();
         DTFecha getFecha();
@@ -28,6 +27,9 @@ class Publicacion {
         void setTitulo(std::string Titulo);
         void setFecha(DTFecha Fecha);
         virtual bool contienePalabra(std::string palabra)=0;
+        //Publicacion& operator=(const Publicacion& f);
 };
+
+//#include "investigador.hh"
 
 #endif
