@@ -1,6 +1,6 @@
 #include <list>
 #include <map>
-#include "publicacion.hh"
+//#include "publicacion.hh"
 #include "investigador.hh"
 
 std::list<Publicacion*> publicaciones;
