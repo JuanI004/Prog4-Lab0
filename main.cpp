@@ -7,6 +7,7 @@
 #include "libro.hh"
 #include "paginaWeb.hh"
 #include "DTFecha.hh"
+#include "DTRefer.hh"
 
 
 
@@ -20,25 +21,25 @@ void coleccion_guardarPublicacion(Publicacion* pub){
 	publicaciones.push_back(pub);
 	std::pair<std::string, Publicacion*> entry(pub->getDOI(), pub);
     map_publicaciones.insert(entry);
-}
+};
 void coleccion_eliminarPublicacion(Publicacion* pub){
 	publicaciones.remove(pub);
 	map_publicaciones.erase(pub->getDOI());
-}
+};
 
 void coleccion_guardarInvestigador(Investigador* inv){
 	investigadores.push_back(inv);
 	std::pair<std::string, Investigador*> entry(inv->getORCID(), inv);
     map_investigadores.insert(entry);
-}
+};
 
 Investigador* coleccion_getInvestigador(std::string ORCID){
 	return map_investigadores[ORCID];
-}
+};
 
 Publicacion* coleccion_getPublicacion(std::string DOI){
 	return map_publicaciones[DOI];
-}
+};
 
 void parte_a(){
 	std::string DOI = "10.1234/abc123";
@@ -58,7 +59,7 @@ void parte_a(){
 	a2->setTitulo(titulo2);
 	a2->setFecha(*f2);
 	coleccion_guardarPublicacion(a2);
-}
+};
 
 void parte_b(){
 	std::string DOI1 = "10.2345/def456";
@@ -87,54 +88,83 @@ void parte_b(){
 	b2->setTitulo(titulo2);
 	b2->setFecha(f2);
 	coleccion_guardarPublicacion(b2);
-}
+};
 
 void parte_c(){
 	std::string DOI = "10.3456/ghi789";
 	std::string titulo = "Diagramas para Principiantes" ;
 	DTFecha *f = new DTFecha(20,10,2024);
-PaginaWeb *pw = new PaginaWeb("www.umlparaprincipiantes.com", "En esta pagina web se presenta una gui completa sobre los diagramas UML, abordando los diagramas de casos de uso, de clases, de secuencia y de actividades.");
-pw->setDOI(DOI);
-pw->setTitulo(titulo);
-pw->setFecha(*f);
-coleccion_guardarPublicacion(pw);
-}
+	PaginaWeb *pw = new PaginaWeb("www.umlparaprincipiantes.com", "En esta pagina web se presenta una gui completa sobre los diagramas UML, abordando los diagramas de casos de uso, de clases, de secuencia y de actividades.");
+	pw->setDOI(DOI);
+	pw->setTitulo(titulo);
+	pw->setFecha(*f);
+	coleccion_guardarPublicacion(pw);
+};
 
 void parte_d(){
-	int i = 0;
+	Publicacion *p1 = coleccion_getPublicacion("10.1234/abc123");
+	Publicacion *p2 = coleccion_getPublicacion("10.4567/jkl012");
+	Publicacion *p3 = coleccion_getPublicacion("10.2345/def456");
+	Publicacion *p4 = coleccion_getPublicacion("10.5678/mno345");
+	Publicacion *p5 = coleccion_getPublicacion("10.3456/ghi789");
+	std::cout<< p1->getDT() << std::endl;
+	std::cout<< p2->getDT() << std::endl;
+	std::cout<< p3->getDT() << std::endl;
+	std::cout<< p4->getDT() << std::endl;
+	std::cout<< p5->getDT() << std::endl;
+	/*int i = 0;
 	Publicacion* aux;
 	while (i < publicaciones.size()){
 		aux = publicaciones.front();
 		aux->getDT();
 		publicaciones.push_back(aux);
 		publicaciones.pop_front();
-		std::cout<< aux;
+		std::cout<< aux << std::endl;
 		i++;
 	}
-}
+	*/
+};
 
 void parte_e(){
 	Investigador *e1 = new Investigador("0000-0003-1234-5678", "Carla Olivieri", "Universidad de la Republica");
 	Investigador *e2 = new Investigador("0000-0001-8765-4321", "Alberto Santos", "Instituto Tecnico");
-}
+	coleccion_guardarInvestigador(e1);
+	coleccion_guardarInvestigador(e2);
+};
 
 void parte_f(){
-}
+	Investigador *e1 = coleccion_getInvestigador("0000-0003-1234-5678");
+	std::cout<< e1->toString() << std::endl;
+	Investigador *e2 = coleccion_getInvestigador("0000-0001-8765-4321");
+	std::cout<< e2->toString() << std::endl;
+
+	/*
+	for(Investigador it = inv.begin(); it!=inv.end(), ++it){
+		std::cout<< it.toString() << std::endl;
+	}
+	*/
+	/*
+	for(int it = 0; it < inv.end(), ++it){
+		std::cout<< it.toString() << std::endl;
+	}
+	/*
+	*/
+};
 
 void parte_g(){
-}
+};
 
 void parte_h(){
-}
+};
 
 void parte_i(){
-}
+};
 
 void parte_j(){
-}
+};
 
 void parte_k(){
-}
+};
 
 
 int main() {
@@ -165,5 +195,4 @@ int main() {
 	std::cout << "fin" <<  std::endl;
 
 	return 0;
-}
-
+};

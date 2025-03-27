@@ -18,6 +18,7 @@ class DTFecha{
         int getAnio();
         friend std::ostream& operator<<(std::ostream& os,DTFecha& f);
         DTFecha& operator=(const DTFecha& f);
+        bool operator>=(const DTFecha& f) const;
 };
 
 #endif

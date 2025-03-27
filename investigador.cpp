@@ -34,18 +34,31 @@ void Investigador::setInstitucion(std::string institucion){
     this->institucion = institucion;
 };
 
+std::map<std::string, Publicacion*> Investigador:: getPublicaciones(){
+    return this->publicaciones;
+};
+
+void Investigador:: agregarPublicacion(Publicacion* p){
+    this->publicaciones.insert(std::make_pair(p->getDOI(), p));
+};
+
 std::string Investigador::toString(){
     return this->ORCID + "->" + this->nombre + "/" + this->institucion;
 };
 
 std::set<std::string> Investigador:: listarPublicaciones(DTFecha desde, std::string palabra){
-    if (publicaciones.empty()) {
-        std::cout << "No hay publicaciones registradas." << std::endl;
-        return;
+    std::set<std::string> ret;
+    std::map<std::string, Publicacion*>::iterator it;
+    for(it = this->publicaciones.begin(); it != this->publicaciones.end(); ++it) {
+        Publicacion* pub = it->second;
+        if(pub->getFecha() >= desde) {
+            std::string titulo = pub->getTitulo();
+            if(palabra.empty() || pub->contienePalabra(palabra)){
+                ret.insert(pub->getDOI());
+            }
+        }
     }
-    std::set<std::string> publicaciones;
     
-    return publicaciones;
+    return ret;
     
-
 };

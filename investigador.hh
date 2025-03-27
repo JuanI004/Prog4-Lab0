@@ -10,13 +10,15 @@ class Investigador{
         std::string ORCID; 
         std::string nombre;
         std::string institucion;
-        std::map<int, Publicacion*> publicaciones;
+        std::map<std::string, Publicacion*> publicaciones;
     public:
         Investigador(std::string, std::string, std::string);
         ~Investigador();
         std::string getORCID();
         std::string getNombre();
         std::string getInstitucion();
+        std::map<std::string, Publicacion*> getPublicaciones();
+        void agregarPublicacion(Publicacion*);
         void setORCID(std::string ORCID);
         void setNombre(std::string nombre);
         void setInstitucion(std::string institucion);

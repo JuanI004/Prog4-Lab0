@@ -41,3 +41,17 @@ DTFecha& DTFecha::operator=(const DTFecha& f){
     };
     return *this;
 };
+
+bool DTFecha::operator>=(const DTFecha& f) const {
+    if (this->anio > f.anio)
+        return true;
+    else if (this->anio == f.anio) {
+        if (this->mes > f.mes)
+            return true;
+        else if (this->mes == f.mes) {
+            if (this->dia >= f.dia)
+                return true;
+        }
+    }
+    return false;
+};
