@@ -39,5 +39,9 @@ std::string Investigador::toString(){
 };
 
 std::set<std::string> Investigador::listarPublicaciones(DTFecha desde, std::string palabra){
+    std::set<std::string> resultados;
     
+    // Implementation will be added later
+    
+    return resultados;
 };

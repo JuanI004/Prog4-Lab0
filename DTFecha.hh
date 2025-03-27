@@ -1,3 +1,6 @@
+#ifndef DTFECHA_HH
+#define DTFECHA_HH
+
 #include <iostream>
 #include <string>
 
@@ -14,6 +17,7 @@ class DTFecha{
         int getMes();
         int getAnio();
         friend std::ostream& operator<<(std::ostream& os,DTFecha& f);
-        DTFecha& operator=(DTFecha& f);
+        DTFecha& operator=(const DTFecha& f);
 };
 
+#endif

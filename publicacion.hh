@@ -1,3 +1,6 @@
+#ifndef PUBLICACION_HH
+#define PUBLICACION_HH
+
 #include <string>
 #include "DTRefer.hh"
 //#include "investigador.hh"
@@ -27,4 +30,4 @@ class Publicacion{
         virtual bool contienePalabra(std::string palabra)=0;
 };
 
-
+#endif

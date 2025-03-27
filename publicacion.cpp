@@ -1,5 +1,5 @@
 #include "publicacion.hh"
-#include "Investigador.hh" // Include the header for the Investigador class
+#include "investigador.hh" // Include the header for the Investigador class
 
 Publicacion::Publicacion(){
     this->DOI = "";

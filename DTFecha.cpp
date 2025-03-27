@@ -33,7 +33,7 @@ std::ostream& operator<<(std::ostream& os, DTFecha& f){
     return os;
 };
 
-DTFecha& DTFecha::operator=(DTFecha& f){
+DTFecha& DTFecha::operator=(const DTFecha& f){
     if (this != &f) {
         this->dia = f.dia;
         this->mes = f.mes;

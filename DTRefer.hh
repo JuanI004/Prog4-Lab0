@@ -1,3 +1,6 @@
+#ifndef DTREFER_HH
+#define DTREFER_HH
+
 #include <vector>
 #include "DTFecha.hh"
 
@@ -16,3 +19,5 @@ class DTRefer {
         ~DTRefer();
         friend std::ostream& operator<<(std::ostream& os,DTRefer& dt);
 };
+
+#endif

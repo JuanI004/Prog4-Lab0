@@ -1,3 +1,6 @@
+#ifndef INVESTIGADOR_HH
+#define INVESTIGADOR_HH
+
 #include "publicacion.hh" 
 #include <map>
 #include <set>
@@ -7,7 +10,7 @@ class Investigador{
         std::string ORCID; 
         std::string nombre;
         std::string institucion;
-        std::map<int, Publicacion> publicaciones;
+        std::map<int, Publicacion*> publicaciones;
     public:
         Investigador(std::string, std::string, std::string);
         ~Investigador();
@@ -20,3 +23,5 @@ class Investigador{
         std::string toString();
         std::set<std::string> listarPublicaciones(DTFecha desde, std::string palabra);
 };
+
+#endif

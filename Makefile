@@ -5,7 +5,7 @@ EXEC = programa
 CXX = g++
 CXXFLAGS = -std=c++98
 # Archivos fuente y objetos
-SRC = main.cpp Publicacion.cpp ArticuloRevista.cpp Libro.cpp PaginaWeb.cpp Investigador.cpp DTFecha.cpp DTRefer.cpp
+SRC = main.cpp publicacion.cpp articuloRevista.cpp libro.cpp paginaWeb.cpp investigador.cpp DTFecha.cpp DTRefer.cpp
 OBJ = $(SRC:.cpp=.o)
 
 # Regla principal: Compilar el programa
