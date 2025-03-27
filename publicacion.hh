@@ -5,7 +5,7 @@
 
 class Investigador;
 
-class Publicacion{
+class Publicacion {
     private:
         std::string DOI;
         std::string Titulo;
