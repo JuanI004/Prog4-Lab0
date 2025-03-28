@@ -1,5 +1,5 @@
 #include "publicacion.hh"
-#include "investigador.hh" // Include the header for the Investigador class
+#include "investigador.hh" 
 
 Publicacion::Publicacion(){
     this->DOI = "";
@@ -14,6 +14,7 @@ Publicacion::Publicacion(std::string DOI, std::string Titulo, DTFecha Fecha){
 };
 
 Publicacion:: ~Publicacion(){
+    autores.clear();
 };
 
 std::string Publicacion::getDOI(){
@@ -55,60 +56,3 @@ void Publicacion::setTitulo(std::string Titulo) {
 void Publicacion::setFecha(DTFecha Fecha) {
     this->Fecha = Fecha;
 };
-
-/*
-Publicacion& Publicacion::operator=(const Publicacion& p){
-    this->DOI = p.DOI;
-    this->Titulo = p.Titulo;
-    this->Fecha = p.Fecha;
-    this->autores = p.autores;
-    return *this;
-};
-*/
-
-/*#include "Publicacion.h"
-#include "Investigador.h"
-
-// Constructor
-Publicacion::Publicacion(const std::string& doi, const std::string& titulo, const DTFecha& fecha)
-    : doi(doi), titulo(titulo), fecha(fecha) {}
-
-// Destructor
-Publicacion::~Publicacion() {}
-
-// Getters
-std::string Publicacion::getDOI() const {
-    return doi;
-}
-
-std::string Publicacion::getTitulo() const {
-    return titulo;
-}
-
-DTFecha Publicacion::getFecha() const {
-    return fecha;
-}
-
-std::vector<Investigador*> Publicacion::getAutores() const {
-    return autores;
-}
-
-// Agregar autor a la lista de autores
-void Publicacion::agregarAutor(Investigador* autor) {
-    autores.push_back(autor);
-}
-
-// Obtener los datos de la publicación en formato DTRefer
-DTRefer Publicacion::getDT() const {
-    std::vector<std::string> nombresAutores;
-    for (const auto& autor : autores) {
-        nombresAutores.push_back(autor->getNombre());
-    }
-    return DTRefer(doi, titulo, fecha, nombresAutores);
-}
-
-// Sobrecarga del operador <<
-std::ostream& operator<<(std::ostream& os, const Publicacion& pub) {
-    os << pub.getDT();
-    return os;
-}*/

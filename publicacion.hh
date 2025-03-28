@@ -27,7 +27,6 @@ class Publicacion {
         void setTitulo(std::string Titulo);
         void setFecha(DTFecha Fecha);
         virtual bool contienePalabra(std::string palabra)=0;
-        //Publicacion& operator=(const Publicacion& f);
 };
 
 //#include "investigador.hh"

@@ -19,6 +19,7 @@ class Investigador{
         std::string getInstitucion();
         std::map<std::string, Publicacion*> getPublicaciones();
         void agregarPublicacion(Publicacion*);
+        void eliminarPublicacion(Publicacion*);
         void setORCID(std::string ORCID);
         void setNombre(std::string nombre);
         void setInstitucion(std::string institucion);

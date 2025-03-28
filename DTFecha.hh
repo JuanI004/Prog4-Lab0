@@ -13,10 +13,10 @@ class DTFecha{
         DTFecha();
         DTFecha(int, int, int);
         ~DTFecha();
-        int getDia();
-        int getMes();
-        int getAnio();
-        friend std::ostream& operator<<(std::ostream& os,DTFecha& f);
+        int getDia() const;
+        int getMes() const;
+        int getAnio() const;
+        friend std::ostream& operator<<(std::ostream& os,const DTFecha& f);
         DTFecha& operator=(const DTFecha& f);
         bool operator>=(const DTFecha& f) const;
 };

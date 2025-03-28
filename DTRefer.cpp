@@ -6,23 +6,23 @@ DTRefer::DTRefer(std::string DOI, std::string titulo, DTFecha fecha, std::vector
     this->fecha = fecha;
     this->autores = autores;
 }
-std::string DTRefer::getDOI() {
+std::string DTRefer::getDOI() const {
     return this->DOI;
 }
-std::string DTRefer::getTitulo() {
+std::string DTRefer::getTitulo() const {
     return this->titulo;
 }
-DTFecha DTRefer:: getFecha() {
+DTFecha DTRefer:: getFecha() const {
     return fecha;
 }
-std::vector<std::string>  DTRefer::getAutores() {
+std::vector<std::string>  DTRefer::getAutores() const {
     return this->autores;
 }
 DTRefer::~DTRefer() {
     this->autores.clear();
 }
 
-std::ostream& operator<<(std::ostream& os, DTRefer& dt) {
+std::ostream& operator<<(std::ostream& os, const DTRefer& dt) {
     os << dt.DOI << "->" << dt.titulo << "(" << dt.fecha << ")/";
     
     for (size_t i = 0; i < dt.getAutores().size(); i++) {
@@ -31,5 +31,6 @@ std::ostream& operator<<(std::ostream& os, DTRefer& dt) {
             os << ",";
         }
     }
+ 
     return os;
 }

@@ -12,12 +12,12 @@ class DTRefer {
         std::vector<std::string> autores;
     public:
         DTRefer(std::string, std::string, DTFecha, std::vector<std::string>);
-        std::string getDOI();
-        std::string getTitulo();
-        DTFecha getFecha();
-        std::vector<std::string> getAutores();
+        std::string getDOI() const;
+        std::string getTitulo() const;
+        DTFecha getFecha() const;
+        std::vector<std::string> getAutores() const;
         ~DTRefer();
-        friend std::ostream& operator<<(std::ostream& os,DTRefer& dt);
+        friend std::ostream& operator<<(std::ostream& os, const DTRefer& dt);
 };
 
 #endif

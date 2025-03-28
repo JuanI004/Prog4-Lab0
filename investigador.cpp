@@ -42,6 +42,10 @@ void Investigador:: agregarPublicacion(Publicacion* p){
     this->publicaciones.insert(std::make_pair(p->getDOI(), p));
 };
 
+void Investigador:: eliminarPublicacion(Publicacion* p){
+    this->publicaciones.erase(p->getDOI());
+};
+
 std::string Investigador::toString(){
     return this->ORCID + "->" + this->nombre + "/" + this->institucion;
 };
@@ -51,14 +55,14 @@ std::set<std::string> Investigador:: listarPublicaciones(DTFecha desde, std::str
     std::map<std::string, Publicacion*>::iterator it;
     for(it = this->publicaciones.begin(); it != this->publicaciones.end(); ++it) {
         Publicacion* pub = it->second;
-        if(pub->getFecha() >= desde) {
-            std::string titulo = pub->getTitulo();
-            if(palabra.empty() || pub->contienePalabra(palabra)){
-                ret.insert(pub->getDOI());
-            }
+        if(pub != NULL){
+            if(pub->getFecha() >= desde) {
+                std::string titulo = pub->getTitulo();
+                if(palabra.empty() || pub->contienePalabra(palabra)){
+                    ret.insert(pub->getDOI());
+                }
+            }    
         }
     }
-    
     return ret;
-    
 };

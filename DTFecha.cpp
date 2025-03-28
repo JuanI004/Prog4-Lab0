@@ -16,19 +16,19 @@ DTFecha::~DTFecha(){
     //delete this;
 };
 
-int DTFecha::getDia(){
+int DTFecha::getDia() const{
     return this->dia;
 };
 
-int DTFecha::getMes(){
+int DTFecha::getMes() const{
     return this->mes;
 };
 
-int DTFecha::getAnio(){
+int DTFecha::getAnio() const{
     return this->anio;
 };
 
-std::ostream& operator<<(std::ostream& os, DTFecha& f){
+std::ostream& operator<<(std::ostream& os, const DTFecha& f){
     os << f.dia << "/" << f.mes << "/" << f.anio;
     return os;
 };
