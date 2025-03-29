@@ -121,18 +121,6 @@ void parte_f(){
 	std::cout<< e1->toString() << std::endl;
 	Investigador *e2 = coleccion_getInvestigador("0000-0001-8765-4321");
 	std::cout<< e2->toString() << std::endl;
-
-	/*
-	for(Investigador it = inv.begin(); it!=inv.end(), ++it){
-		std::cout<< it.toString() << std::endl;
-	}
-	*/
-	/*
-	for(int it = 0; it < inv.end(), ++it){
-		std::cout<< it.toString() << std::endl;
-	}
-	/*
-	*/
 };
 
 void parte_g(){
@@ -162,9 +150,9 @@ void parte_g(){
 };
 
 void parte_h(){
-	Investigador carla = *coleccion_getInvestigador("0000-0003-1234-5678");
+	Investigador* carla = coleccion_getInvestigador("0000-0003-1234-5678");
 	
-	std::set<std::string> pub = carla.listarPublicaciones(DTFecha(10,12,2023),"UML");
+	std::set<std::string> pub = carla->listarPublicaciones(DTFecha(10,12,2023),"UML");
 	std::set<std::string>::iterator it;
 	for(it = pub.begin(); it != pub.end(); ++it){
 		std::cout<< coleccion_getPublicacion(*it)->getDT() << std::endl;
@@ -173,15 +161,14 @@ void parte_h(){
 
 void parte_i(){
     Publicacion* pub = coleccion_getPublicacion("10.4567/jkl012"); 	
-	std::string doi=pub->getDOI();
 	std::list<Investigador*>::iterator it;
 	for(it = investigadores.begin(); it != investigadores.end(); ++it) {
-		(*it)->getPublicaciones().erase(doi);
+		(*it)->eliminarPublicacion(pub);
 	}
 	coleccion_eliminarPublicacion(pub);
-	//delete pub;
+	delete pub;
+	pub=NULL;
 }
-	
 
 void parte_j(){
 	Investigador carla = *coleccion_getInvestigador("0000-0003-1234-5678");
@@ -192,9 +179,10 @@ void parte_j(){
 			std::cout<< coleccion_getPublicacion(*it)->getDT() << std::endl;
 		}
 	}
+	
 };
 
-void parte_k(){
+void parte_k(){	
 	int i = 0;
 	Publicacion* aux;
 	while (i < publicaciones.size()){
