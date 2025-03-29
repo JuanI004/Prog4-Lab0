@@ -7,7 +7,6 @@ libro::libro(std::string editorial, std::set<std::string> palabrasDes) : Publica
 };
 
 libro:: ~libro(){
-   
 };
 
 std::string libro:: getEditorial(){

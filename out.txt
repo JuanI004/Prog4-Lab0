@@ -1,0 +1,28 @@
+parte_a
+parte_b
+parte_c
+parte_d
+10.1234/abc123->Fundamentos de POO(15/5/2023)/
+10.4567/jkl012->Utilidad de diagramas UML(10/2/2024)/
+10.2345/def456->Patrones de Diseno en c++(20/8/2022)/
+10.5678/mno345->Guia de UML(20/8/2022)/
+10.3456/ghi789->Diagramas para Principiantes(20/10/2024)/
+parte_e
+parte_f
+0000-0003-1234-5678->Carla Olivieri/Universidad de la Republica
+0000-0001-8765-4321->Alberto Santos/Instituto Tecnico
+parte_g
+parte_h
+10.3456/ghi789->Diagramas para Principiantes(20/10/2024)/Carla Olivieri
+10.4567/jkl012->Utilidad de diagramas UML(10/2/2024)/Carla Olivieri,Alberto Santos
+parte_i
+parte_j
+10.3456/ghi789->Diagramas para Principiantes(20/10/2024)/Carla Olivieri
+10.5678/mno345->Guia de UML(20/8/2022)/Carla Olivieri
+parte_k
+10.1234/abc123->Fundamentos de POO(15/5/2023)/Carla Olivieri,Alberto Santos
+10.2345/def456->Patrones de Diseno en c++(20/8/2022)/Alberto Santos
+10.5678/mno345->Guia de UML(20/8/2022)/Carla Olivieri
+10.3456/ghi789->Diagramas para Principiantes(20/10/2024)/Carla Olivieri
+cleanUp
+fin

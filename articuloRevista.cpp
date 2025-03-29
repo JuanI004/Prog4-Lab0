@@ -6,7 +6,6 @@ articuloRevista :: articuloRevista(std::string r, std::string e) : Publicacion()
 };
 
 articuloRevista :: ~articuloRevista(){
-    // Base class destructor will be called automatically
 };
 
 std::string articuloRevista:: getRevista(){

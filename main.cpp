@@ -22,6 +22,7 @@ void coleccion_guardarPublicacion(Publicacion* pub){
 	std::pair<std::string, Publicacion*> entry(pub->getDOI(), pub);
     map_publicaciones.insert(entry);
 };
+
 void coleccion_eliminarPublicacion(Publicacion* pub){
 	publicaciones.remove(pub);
 	map_publicaciones.erase(pub->getDOI());
@@ -151,7 +152,6 @@ void parte_g(){
 
 void parte_h(){
 	Investigador* carla = coleccion_getInvestigador("0000-0003-1234-5678");
-	
 	std::set<std::string> pub = carla->listarPublicaciones(DTFecha(10,12,2023),"UML");
 	std::set<std::string>::iterator it;
 	for(it = pub.begin(); it != pub.end(); ++it){
@@ -168,7 +168,7 @@ void parte_i(){
 	coleccion_eliminarPublicacion(pub);
 	delete pub;
 	pub=NULL;
-}
+};
 
 void parte_j(){
 	Investigador carla = *coleccion_getInvestigador("0000-0003-1234-5678");
@@ -208,7 +208,7 @@ void cleanUp() {
     }
     investigadores.clear();
     map_investigadores.clear();
-}
+};
 
 
 int main() {

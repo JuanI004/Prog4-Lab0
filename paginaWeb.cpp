@@ -7,10 +7,6 @@ PaginaWeb::PaginaWeb(std::string url, std::string contenidoExtraido) : Publicaci
 };
 
 PaginaWeb:: ~PaginaWeb() {
-    /*
-    this->~Publicacion();
-    delete this;
-    */
 };
 
 std::string PaginaWeb::getUrl() {

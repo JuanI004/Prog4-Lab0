@@ -13,7 +13,6 @@ DTFecha::DTFecha(int dia, int mes, int anio){
 };
 
 DTFecha::~DTFecha(){
-    //delete this;
 };
 
 int DTFecha::getDia() const{

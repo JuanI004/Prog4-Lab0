@@ -29,6 +29,6 @@ class Publicacion {
         virtual bool contienePalabra(std::string palabra)=0;
 };
 
-//#include "investigador.hh"
+#include "investigador.hh"
 
 #endif

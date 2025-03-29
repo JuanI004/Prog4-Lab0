@@ -7,7 +7,6 @@ Investigador::Investigador(std::string ORCID, std::string nombre, std::string in
 };
 
 Investigador::~Investigador(){
-    this->publicaciones.clear();
 };
 
 std::string Investigador::getORCID(){

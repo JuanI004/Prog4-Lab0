@@ -1,5 +1,4 @@
 #include "publicacion.hh"
-#include "investigador.hh" 
 
 Publicacion::Publicacion(){
     this->DOI = "";
@@ -14,7 +13,6 @@ Publicacion::Publicacion(std::string DOI, std::string Titulo, DTFecha Fecha){
 };
 
 Publicacion:: ~Publicacion(){
-    autores.clear();
 };
 
 std::string Publicacion::getDOI(){
